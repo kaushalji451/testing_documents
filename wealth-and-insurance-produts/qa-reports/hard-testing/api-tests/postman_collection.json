@@ -1,0 +1,65 @@
+{
+  "info": {
+    "_postman_id": "b321a45f-5c22-4bb2-8b01-cd33d1234abc",
+    "name": "Mutual Details GET API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Mutual/Stock/ETF Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://mutualproducts.onrender.com/mutual_details?name=TCS.NS",
+          "protocol": "https",
+          "host": [
+            "mutualproducts",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "mutual_details"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "TCS.NS"
+            }
+          ]
+        },
+        "description": "Fetches details for the provided mutual fund, stock, or ETF symbol using a GET request."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://mutualproducts.onrender.com/mutual_details?name=TCS.NS",
+              "protocol": "https",
+              "host": [
+                "mutualproducts",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "mutual_details"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "TCS.NS"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"language\": \"en-US\",\n  \"region\": \"US\",\n  \"quoteType\": \"EQUITY\",\n  \"typeDisp\": \"Equity\",\n  \"quoteSourceName\": \"Delayed Quote\",\n  \"triggerable\": true,\n  \"customPriceAlertConfidence\": \"HIGH\",\n  \"exchange\": \"NSI\",\n  \"messageBoardId\": \"finmb_6411769\",\n  \"exchangeTimezoneName\": \"Asia/Kolkata\",\n  \"exchangeTimezoneShortName\": \"IST\",\n  \"gmtOffSetMilliseconds\": 19800000,\n  \"market\": \"in_market\",\n  \"esgPopulated\": false,\n  \"corporateActions\": [],\n  \"regularMarketTime\": \"2025-04-17T10:00:00.000Z\",\n  \"currency\": \"INR\",\n  \"shortName\": \"TATA CONSULTANCY SERV LT\",\n  \"longName\": \"Tata Consultancy Services Limited\",\n  \"averageAnalystRating\": \"2.0 - Buy\",\n  \"tradeable\": false,\n  \"cryptoTradeable\": false,\n  \"regularMarketChangePercent\": 0.76668864,\n  \"regularMarketPrice\": 3298.9,\n  \"marketState\": \"CLOSED\",\n  \"bid\": 0,\n  \"ask\": 0,\n  \"bidSize\": 0,\n  \"askSize\": 0,\n  \"fullExchangeName\": \"NSE\",\n  \"financialCurrency\": \"INR\",\n  \"regularMarketOpen\": 3245.5,\n  \"averageDailyVolume3Month\": 2652723,\n  \"averageDailyVolume10Day\": 4553375,\n  \"fiftyTwoWeekLowChange\": 242.84985,\n  \"fiftyTwoWeekLowChangePercent\": 0.07946527,\n  \"fiftyTwoWeekRange\": {\n    \"low\": 3056.05,\n    \"high\": 4592.25\n  },\n  \"fiftyTwoWeekHighChange\": -1293.3501,\n  \"fiftyTwoWeekHighChangePercent\": -0.28163755,\n  \"fiftyTwoWeekLow\": 3056.05,\n  \"fiftyTwoWeekHigh\": 4592.25,\n  \"fiftyTwoWeekChangePercent\": -13.781298,\n  \"earningsTimestamp\": \"2025-04-10T10:30:00.000Z\",\n  \"earningsTimestampStart\": \"2025-07-09T10:30:00.000Z\",\n  \"earningsTimestampEnd\": \"2025-07-14T10:30:00.000Z\",\n  \"earningsCallTimestampStart\": 1744291800,\n  \"earningsCallTimestampEnd\": 1744291800,\n  \"isEarningsDateEstimate\": true,\n  \"trailingAnnualDividendRate\": 60,\n  \"trailingPE\": 24.56915,\n  \"dividendRate\": 58,\n  \"trailingAnnualDividendYield\": 0.018327326,\n  \"dividendYield\": 1.76,\n  \"epsTrailingTwelveMonths\": 134.27,\n  \"epsForward\": 154.68,\n  \"epsCurrentYear\": 143.00159,\n  \"priceEpsCurrentYear\": 23.068974,\n  \"sharesOutstanding\": 3618089984,\n  \"bookValue\": 261.895,\n  \"fiftyDayAverage\": 3580.442,\n  \"fiftyDayAverageChange\": -281.542,\n  \"fiftyDayAverageChangePercent\": -0.07863331,\n  \"twoHundredDayAverage\": 4080.6853,\n  \"twoHundredDayAverageChange\": -781.7854,\n  \"twoHundredDayAverageChangePercent\": -0.19158189,\n  \"marketCap\": 11935716212736,\n  \"forwardPE\": 21.327257,\n  \"priceToBook\": 12.59627,\n  \"sourceInterval\": 15,\n  \"exchangeDataDelayedBy\": 15,\n  \"hasPrePostMarketData\": false,\n  \"firstTradeDateMilliseconds\": \"2002-08-12T03:45:00.000Z\",\n  \"priceHint\": 2,\n  \"regularMarketChange\": 25.099854,\n  \"regularMarketDayHigh\": 3303.6,\n  \"regularMarketDayRange\": {\n    \"low\": 3218,\n    \"high\": 3303.6\n  },\n  \"regularMarketDayLow\": 3218,\n  \"regularMarketVolume\": 2931850,\n  \"regularMarketPreviousClose\": 3273.8,\n  \"symbol\": \"TCS.NS\"\n}"
+        }
+      ]
+    }
+  ]
+}
