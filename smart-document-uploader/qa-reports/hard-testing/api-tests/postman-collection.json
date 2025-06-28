@@ -1,0 +1,73 @@
+{
+  "info": {
+    "_postman_id": "b321a45f-5c22-4bb2-8b01-cd33d1234abc",
+    "name": "Smart Document Uploader - Image POST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Document and Extract Details",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": "https://res.cloudinary.com/dpbpu5b0v/image/upload/v1751040841/uploads/ksi951uiaorfodaw2bj9.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://smart-document-uploader.onrender.com/PanUpload?idType=PanCard",
+          "protocol": "https",
+          "host": [
+            "smart-document-uploader",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "extract"
+          ]
+        },
+        "description": "Uploads an image file and extracts user details like name, father_name, DOB, and ID number."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "https://res.cloudinary.com/dpbpu5b0v/image/upload/v1751040841/uploads/ksi951uiaorfodaw2bj9.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://smart-document-uploader.onrender.com/PanUpload?idType=PanCard",
+              "protocol": "https",
+              "host": [
+                "smart-document-uploader",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "extract"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"name\": \"AJAY KUMAR KAUSHAL\",\n  \"father_name\": \"NEMCHANDRA KAUSHAL\",\n  \"dob\": \"03/07/1977\",\n  \"id_number\": \"DGlPK3650P\"\n}"
+        }
+      ]
+    }
+  ]
+}
