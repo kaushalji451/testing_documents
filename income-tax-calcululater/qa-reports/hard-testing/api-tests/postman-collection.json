@@ -1,0 +1,204 @@
+[{
+  "info": {
+    "_postman_id": "b321a45f-5c22-4bb2-8b01-cd33d1234abc",
+    "name": "Income Tax Calculator - POST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Calculate Tax",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"year\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"resStatus\": \"res\",\n  \"income\": \"850000\",\n  \"regime\": \"oldRegime\"\n}"
+        },
+        "url": {
+          "raw": "https://income-tax-calculator2-mz8r.onrender.com/calculate-tax",
+          "protocol": "https",
+          "host": [
+            "income-tax-calculator2-mz8r",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "calculate-tax"
+          ]
+        },
+        "description": "Submits income tax details and receives a tax calculation breakdown."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"year\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"resStatus\": \"res\",\n  \"income\": \"850000\",\n  \"regime\": \"oldRegime\"\n}"
+            },
+            "url": {
+              "raw": "https://income-tax-calculator2-mz8r.onrender.com/calculate-tax",
+              "protocol": "https",
+              "host": [
+                "income-tax-calculator2-mz8r",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "calculate-tax"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"assismenYear\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"residentalStatus\": \"res\",\n  \"anualIncome\": 850000,\n  \"deduction\": 50000,\n  \"totalTax\": 75400,\n  \"taxableIncome\": 800000,\n  \"cess\": 2900,\n  \"tax\": 72500,\n  \"regime\": \"oldRegime\",\n  \"surcharge\": 0,\n  \"taxBreakdown\": [\n    {\n      \"slab\": \"₹0 - ₹250000\",\n      \"rate\": 0,\n      \"amount\": 0,\n      \"_id\": \"6860ef471d04a33fffac10d4\"\n    },\n    {\n      \"slab\": \"₹250001 - ₹500000\",\n      \"rate\": 0.05,\n      \"amount\": 12500,\n      \"_id\": \"6860ef471d04a33fffac10d5\"\n    },\n    {\n      \"slab\": \"₹500001 - ₹800000\",\n      \"rate\": 0.2,\n      \"amount\": 60000,\n      \"_id\": \"6860ef471d04a33fffac10d6\"\n    }\n  ],\n  \"_id\": \"6860ef471d04a33fffac10d3\",\n  \"createdAt\": \"2025-06-29T07:46:15.674Z\",\n  \"updatedAt\": \"2025-06-29T07:46:15.674Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    }
+  ]
+},
+
+{
+  "info": {
+    "_postman_id": "b321a45f-5c22-4bb2-8b01-cd33d1234abc",
+    "name": "Income Tax Calculator - Advanced Tax POST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Tax Details and Calculate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"year\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"resStatus\": \"res\",\n  \"regime\": \"oldRegime\",\n  \"basicSalary\": \"300000\",\n  \"dearnessAllowance\": \"50000\",\n  \"houseRentAllowance\": \"100000\",\n  \"otherAllowances\": \"20000\",\n  \"perquisites\": \"15000\",\n  \"professionalTax\": \"2500\",\n  \"propertyType\": \"self-occupied\",\n  \"rentalIncome\": \"0\",\n  \"standardDeduction\": \"30000\",\n  \"homeLoanInterest\": \"200000\",\n  \"selfEmployed\": \"100000\",\n  \"freelancers\": \"50000\",\n  \"businesses\": \"80000\",\n  \"assetType\": \"real-estate\",\n  \"holdingPeriod\": \"long\",\n  \"saleValue\": \"1000000\",\n  \"purchaseCost\": \"700000\",\n  \"section54\": \"100000\",\n  \"section54F\": \"0\",\n  \"section54EC\": \"0\",\n  \"dividendIncome\": \"10000\",\n  \"giftIncome\": \"5000\",\n  \"lotteryOrWinnings\": \"0\",\n  \"tdsDeducted\": \"25000\",\n  \"advanceTaxPaid\": \"20000\",\n  \"section80C\": \"150000\",\n  \"section80D\": \"25000\",\n  \"section80E\": \"50000\",\n  \"section80G\": \"10000\",\n  \"section80TTA\": \"10000\",\n  \"section24b\": \"200000\"\n}"
+        },
+        "url": {
+          "raw": "https://income-tax-calculator2-mz8r.onrender.com/adv_tax",
+          "protocol": "https",
+          "host": [
+            "income-tax-calculator2-mz8r",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "adv_tax"
+          ]
+        },
+        "description": "Posts income, capital gain, and deduction data to calculate advanced tax liability."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assismenYear\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"residentalStatus\": \"res\",\n  \"anualIncome\": 516500,\n  \"deduction\": 245000,\n  \"totalTax\": 0,\n  \"taxableIncome\": 271500,\n  \"cess\": 0,\n  \"tax\": 0,\n  \"regime\": \"oldRegime\",\n  \"surcharge\": 0,\n  \"tds\": 25000,\n  \"advanceTax\": 20000,\n  \"netTaxPayable\": 0,\n  \"taxBreakdown\": [],\n  \"_id\": \"6860f10d1d04a33fffac10d8\",\n  \"createdAt\": \"2025-06-29T07:53:49.494Z\",\n  \"updatedAt\": \"2025-06-29T07:53:49.494Z\",\n  \"__v\": 0\n}"
+            },
+            "url": {
+              "raw": "https://income-tax-calculator2-mz8r.onrender.com/adv_tax",
+              "protocol": "https",
+              "host": [
+                "income-tax-calculator2-mz8r",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "adv_tax"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"assismenYear\": \"2025-2026\",\n  \"categery\": \"individual\",\n  \"age\": \"0-60\",\n  \"residentalStatus\": \"res\",\n  \"anualIncome\": 516500,\n  \"deduction\": 245000,\n  \"totalTax\": 0,\n  \"taxableIncome\": 271500,\n  \"cess\": 0,\n  \"tax\": 0,\n  \"regime\": \"oldRegime\",\n  \"surcharge\": 0,\n  \"tds\": 25000,\n  \"advanceTax\": 20000,\n  \"netTaxPayable\": 0,\n  \"taxBreakdown\": [],\n  \"_id\": \"6860f10d1d04a33fffac10d8\",\n  \"createdAt\": \"2025-06-29T07:53:49.494Z\",\n  \"updatedAt\": \"2025-06-29T07:53:49.494Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    }
+  ]
+},
+
+
+{
+  "info": {
+    "_postman_id": "b321a45f-5c22-4bb2-8b01-cd33d1234abd",
+    "name": "Income Tax Calculator - Get Calculations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fetch All Tax Calculations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://income-tax-calculator2-mz8r.onrender.com/calculations",
+          "protocol": "https",
+          "host": [
+            "income-tax-calculator2-mz8r",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "calculations"
+          ]
+        },
+        "description": "Fetches all saved tax calculation results."
+      },
+      "response": [
+        {
+          "name": "Sample Response - Success",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://income-tax-calculator2-mz8r.onrender.com/calculations",
+              "protocol": "https",
+              "host": [
+                "income-tax-calculator2-mz8r",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "calculations"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "[\n  {\n    \"_id\": \"67fe84c97db9dc359bb72c92\",\n    \"assismenYear\": \"2025-2026\",\n    \"categery\": \"individual\",\n    \"age\": \"0-60\",\n    \"residentalStatus\": \"res\",\n    \"anualIncome\": 100000,\n    \"deduction\": 50000,\n    \"totalTax\": 0,\n    \"taxableIncome\": 50000,\n    \"cess\": 0,\n    \"tax\": 0,\n    \"regime\": \"oldRegime\",\n    \"surcharge\": 0,\n    \"taxBreakdown\": [\n      {\n        \"_id\": \"67fe84c97db9dc359bb72c93\"\n      }\n    ],\n    \"createdAt\": \"2025-04-15T16:09:45.492Z\",\n    \"updatedAt\": \"2025-04-15T16:09:45.492Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    }
+  ]
+}
+
+]
+
+
