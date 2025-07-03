@@ -1,0 +1,486 @@
+[
+    {
+  "info": {
+    "_postman_id": "f1d834ef-13c9-4bd0-9617-b65c65e2e9e3",
+    "name": "Interview Scheduler - GET API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Interviews",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "api",
+            "hr",
+            "interview"
+          ]
+        },
+        "description": "Fetches all scheduled interviews."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "hr",
+                "interview"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"interviews\": [\n    {\n      \"_id\": \"68663cbb2532dcfdf3ce0fb7\",\n      \"candidateName\": \"ravi\",\n      \"email\": \"ravi@gmail.com\",\n      \"position\": \"Web dev intern\",\n      \"interviewDate\": \"2025-07-16T00:00:00.000Z\",\n      \"interviewer\": [\"ashu\", \"avi\", \"prem\"],\n      \"status\": \"Scheduled\",\n      \"resumePreviewUrl\": \"https://drive.google.com/file/d/1utuEjezxXDV7RXsN-YTxhAWCj8auCob8/preview\",\n      \"resumeDownloadUrl\": \"https://drive.google.com/uc?id=1utuEjezxXDV7RXsN-YTxhAWCj8auCob8\",\n      \"createdAt\": \"2025-07-03T08:18:03.880Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6819cb2c289cffbb66993c3e\",\n      \"candidateName\": \"kaushal\",\n      \"email\": \"kaushal@gmail.com\",\n      \"position\": \"Web dev intern\",\n      \"interviewDate\": \"2025-05-09T00:00:00.000Z\",\n      \"interviewer\": [\"Ashutosh\", \"avi\"],\n      \"status\": \"Scheduled\",\n      \"resumePreviewUrl\": \"https://drive.google.com/file/d/1ZsbpZIRboIWOYL-F46Y3MFkpcFWZbP7r/preview\",\n      \"resumeDownloadUrl\": \"https://drive.google.com/uc?id=1ZsbpZIRboIWOYL-F46Y3MFkpcFWZbP7r\",\n      \"createdAt\": \"2025-05-06T08:41:16.162Z\",\n      \"__v\": 0\n    }\n  ],\n  \"total\": 2\n}"
+        }
+      ]
+    }
+  ]
+},
+
+{
+  "info": {
+    "_postman_id": "d13237f6-77f5-48c0-bf41-d03f54b8a9a3",
+    "name": "Interview Scheduler - POST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Schedule Interview",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "candidateName",
+              "value": "ravi",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "ravi@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "position",
+              "value": "Web dev intern",
+              "type": "text"
+            },
+            {
+              "key": "interviewDate",
+              "value": "2025-07-16",
+              "type": "text"
+            },
+            {
+              "key": "interviewer",
+              "value": "ashu",
+              "type": "text"
+            },
+            {
+              "key": "interviewer",
+              "value": "avi",
+              "type": "text"
+            },
+            {
+              "key": "interviewer",
+              "value": "prem",
+              "type": "text"
+            },
+            {
+              "key": "resume",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "api",
+            "hr",
+            "interview"
+          ]
+        },
+        "description": "Schedules an interview and uploads resume to Google Drive."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "hr",
+                "interview"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"interviews\": [\n    {\n      \"_id\": \"68663cbb2532dcfdf3ce0fb7\",\n      \"candidateName\": \"ravi\",\n      \"email\": \"ravi@gmail.com\",\n      \"position\": \"Web dev intern\",\n      \"interviewDate\": \"2025-07-16T00:00:00.000Z\",\n      \"interviewer\": [\"ashu\", \"avi\", \"prem\"],\n      \"status\": \"Scheduled\",\n      \"resumePreviewUrl\": \"https://drive.google.com/file/d/1utuEjezxXDV7RXsN-YTxhAWCj8auCob8/preview\",\n      \"resumeDownloadUrl\": \"https://drive.google.com/uc?id=1utuEjezxXDV7RXsN-YTxhAWCj8auCob8\",\n      \"createdAt\": \"2025-07-03T08:18:03.880Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6819cb2c289cffbb66993c3e\",\n      \"candidateName\": \"kaushal\",\n      \"email\": \"kaushal@gmail.com\",\n      \"position\": \"Web dev intern\",\n      \"interviewDate\": \"2025-05-09T00:00:00.000Z\",\n      \"interviewer\": [\"Ashutosh\", \"avi\"],\n      \"status\": \"Scheduled\",\n      \"resumePreviewUrl\": \"https://drive.google.com/file/d/1ZsbpZIRboIWOYL-F46Y3MFkpcFWZbP7r/preview\",\n      \"resumeDownloadUrl\": \"https://drive.google.com/uc?id=1ZsbpZIRboIWOYL-F46Y3MFkpcFWZbP7r\",\n      \"createdAt\": \"2025-05-06T08:41:16.162Z\",\n      \"__v\": 0\n    }\n  ],\n  \"total\": 2\n}"
+        }
+      ]
+    }
+  ]
+},
+{
+  "info": {
+    "_postman_id": "bd87a14f-bb2f-47e0-a75a-9dfce76ed9d2",
+    "name": "Interview Scheduler - PATCH API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Update Interview Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"67ba1bf896b7a1e4f662a6a2\",\n  \"status\": \"Completed\"\n}"
+        },
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "api",
+            "hr",
+            "interview"
+          ]
+        },
+        "description": "Updates the interview status using the provided ID and status."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"67ba1bf896b7a1e4f662a6a2\",\n  \"status\": \"Completed\"\n}"
+            },
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "hr",
+                "interview"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Interview Updated\"\n}"
+        }
+      ]
+    }
+  ]
+},
+{
+  "info": {
+    "_postman_id": "be034d27-f68d-4bdf-90c4-15bb2c15cbfa",
+    "name": "Interview Scheduler - DELETE API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Delete Interview",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"68663cbb2532dcfdf3ce0fb7\"\n}"
+        },
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "api",
+            "hr",
+            "interview"
+          ]
+        },
+        "description": "Deletes an interview by ID."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"68663cbb2532dcfdf3ce0fb7\"\n}"
+            },
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "hr",
+                "interview"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Interview Deleted\"\n}"
+        }
+      ]
+    }
+  ]
+},
+{
+  "info": {
+    "_postman_id": "48b7051d-df3a-4b77-a470-92be2e2cd579",
+    "name": "Interview Scheduler - PUT Resume Update API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Update Resume (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "id",
+              "value": "68663cbb2532dcfdf3ce0fb7",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "ravi kumar",
+              "type": "text"
+            },
+            {
+              "key": "resume",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "api",
+            "hr",
+            "interview"
+          ]
+        },
+        "description": "Updates the candidate resume and name using FormData."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "value": "68663cbb2532dcfdf3ce0fb7",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "ravi kumar",
+                  "type": "text"
+                },
+                {
+                  "key": "resume",
+                  "type": "file",
+                  "src": ""
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/api/hr/interview",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "hr",
+                "interview"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Resume Updated\"\n}"
+        }
+      ]
+    }
+  ]
+},
+{
+  "info": {
+    "_postman_id": "10de1a85-5044-4a2a-b7c7-3213021461a2",
+    "name": "Interview Scheduler - Send Email (POST)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Send Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"to\": \"candidate@example.com\",\n  \"subject\": \"Interview Confirmation\",\n  \"text\": \"Dear Candidate, your interview is confirmed.\"\n}"
+        },
+        "url": {
+          "raw": "https://interview-shaduler.vercel.app/email/send",
+          "protocol": "https",
+          "host": [
+            "interview-shaduler",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "email",
+            "send"
+          ]
+        },
+        "description": "Sends an email to the candidate using provided `to`, `subject`, and `text` fields."
+      },
+      "response": [
+        {
+          "name": "Sample Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"to\": \"candidate@example.com\",\n  \"subject\": \"Interview Confirmation\",\n  \"text\": \"Dear Candidate, your interview is confirmed.\"\n}"
+            },
+            "url": {
+              "raw": "https://interview-shaduler.vercel.app/email/send",
+              "protocol": "https",
+              "host": [
+                "interview-shaduler",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "email",
+                "send"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"message\": \"Success email was send\"\n}"
+        }
+      ]
+    }
+  ]
+}
+]

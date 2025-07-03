@@ -1,5 +1,5 @@
  
-# Checklog - Smart Document Uploader
+# Checklog - Income Tax Calculator
 
 ## ✅ Completed Tasks
 
